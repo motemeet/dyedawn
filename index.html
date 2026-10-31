@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Dyedawn OFFICIAL WEBSITE</title>
 <style>
 :root{
@@ -52,6 +52,7 @@ body{
     transition:border-color 0.25s ease;
 }
 .btn-setting:hover{border-color:var(--accent);}
+
 .panel-setting{
     position:fixed;
     top:0;
@@ -85,6 +86,7 @@ body{
     transition:border-color 0.25s ease;
 }
 .btn-close-panel:hover{border-color:var(--accent);}
+
 .overlay{
     position:fixed;
     inset:0;
@@ -100,6 +102,19 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
+}
+.lang-row{
+    margin-top:1.5rem;
+}
+.lang-select{
+    margin-top:0.6rem;
+    width:100%;
+    padding:0.7rem;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--bg-card);
+    color:var(--text);
+    font-size:1rem;
 }
 .switch{
     width:52px;height:28px;
@@ -120,6 +135,7 @@ body{
 }
 .dark .switch{background:#333740;}
 .dark .switch::after{transform:translateX(24px);}
+
 .setting-link{
     margin-top:1.6rem;
     display:block;
@@ -136,6 +152,7 @@ body{
     border-color:var(--accent);
     transform:translateY(-2px);
 }
+
 .hero{
     min-height:85vh;
     display:flex;
@@ -190,6 +207,7 @@ body{
     text-decoration:none;
     font-size:1.05rem;
 }
+
 .container{
     width:min(720px,92%);
     margin:0 auto;
@@ -202,6 +220,7 @@ body{
 .page.active{
     display:block;
 }
+
 .nav-group{
     display:flex;
     gap:1rem;
@@ -222,6 +241,7 @@ body{
     border-color:var(--accent);
     transform:translateY(-2px);
 }
+
 .back-home{
     display:inline-block;
     margin-bottom:2.4rem;
@@ -236,6 +256,7 @@ body{
     color:var(--text);
     text-decoration:underline;
 }
+
 .link-group{
     margin-top:2rem;
     text-align:left;
@@ -273,36 +294,7 @@ body{
     color:var(--accent);
     word-break:break-all;
 }
-.file-row{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    width:100%;
-    padding:1.25rem 1.4rem;
-    margin-bottom:1.25rem;
-    border:1px solid var(--border);
-    border-radius:12px;
-    background:var(--bg-card);
-    transition:border-color 0.25s ease, transform 0.2s ease;
-}
-.file-row:hover{
-    border-color:var(--accent);
-    transform:translateY(-2px);
-}
-.download-btn{
-    padding:0.45rem 0.9rem;
-    border:1px solid var(--border);
-    border-radius:6px;
-    font-size:0.85rem;
-    cursor:pointer;
-    transition:0.2s;
-    color:var(--text);
-    text-decoration:none;
-}
-.download-btn:hover{
-    background:var(--accent);
-    color:#fff;
-}
+
 #pageTop{
     position:fixed;
     bottom:24px;
@@ -327,6 +319,7 @@ body{
     pointer-events:auto;
 }
 #pageTop:hover{border-color:var(--accent);}
+
 footer{
     width:100%;
     padding-bottom:2rem;
@@ -341,26 +334,36 @@ footer{
 <div class="ctrl-top-right">
     <button class="btn-setting" id="btnSetting">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
         </svg>
     </button>
 </div>
+
 <div class="panel-setting" id="panelSetting">
     <div class="panel-header">
-        <h3>设置</h3>
+        <h3 data-i18n="setting">设置</h3>
         <button class="btn-close-panel" id="btnClosePanel">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 6l12 12M6 18L18 6" />
+                <path d="M6 6l12 12M6 18L18 6"/>
             </svg>
         </button>
     </div>
     <div class="theme-row">
-        <span>明暗模式</span>
+        <span data-i18n="darkmode">明暗模式</span>
         <div class="switch" id="switchTheme"></div>
     </div>
-    <a class="setting-link" href="https://mote27-ctrl.github.io/myfirstweb1" target="_blank">陌音コポ official website</a>
+    <div class="lang-row">
+        <span data-i18n="language">语言选择</span>
+        <select class="lang-select" id="langSelect">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+    <a class="setting-link" href="https://motemeet.github.io/hakuonkopo/" target="_blank">陌音コポ official website</a>
 </div>
+
 <div id="homePage" class="page active">
 <header class="hero">
     <h1 class="hero-title">Dyedawn</h1>
@@ -372,111 +375,221 @@ footer{
         <div class="stream-item">
             <a href="https://v.douyin.com/xuWnac6A9W4/" target="_blank">抖音</a>
         </div>
+        <div class="stream-item">
+            <a href="https://xhslink.cn/o/4XYiCNLztdV" target="_blank">小红书</a>
+        </div>
     </div>
 </header>
 <main class="container">
     <div class="nav-group">
-        <button class="nav-btn" id="goShare">网站分享</button>
-        <button class="nav-btn" id="goFile">文件分享</button>
+        <button class="nav-btn" id="goShare" data-i18n="shareBtn">网站分享</button>
     </div>
 </main>
 </div>
+
 <div id="sharePage" class="page">
 <main class="container">
-    <a class="back-home" id="goHome" href="#">返回首页</a>
+    <a class="back-home" id="goHome" href="#" data-i18n="backHome">返回首页</a>
     <div class="link-group">
-        <div class="section-label">工程配布</div>
+        <div class="section-label" data-i18n="cat1">工程配布</div>
         <a class="normal-block" href="https://vsqx.top" target="_blank">
-            <div class="link-name">v站工程分享站</div>
+            <div class="link-name" data-i18n="link1">v站工程分享站</div>
             <div class="link-url">vsqx.top</div>
         </a>
         <a class="normal-block" href="https://vocaloader.app/" target="_blank">
-            <div class="link-name">外网工程分享站</div>
+            <div class="link-name" data-i18n="link2">外网工程分享站</div>
             <div class="link-url">https://vocaloader.app/</div>
         </a>
         <a class="normal-block" href="https://vocalfiles.top/?nocache=1" target="_blank">
-            <div class="link-name">vocalfiles工程站</div>
+            <div class="link-name" data-i18n="link3">vocalfiles工程站</div>
             <div class="link-url">https://vocalfiles.top/?nocache=1</div>
         </a>
-        <div class="section-label">世界计划</div>
+
+        <div class="section-label" data-i18n="cat2">世界计划</div>
         <a class="normal-block" href="http://st.3kn.jp/" target="_blank">
-            <div class="link-name">pjsk表情包制作网址1</div>
+            <div class="link-name" data-i18n="link4">pjsk表情包制作网址1</div>
             <div class="link-url">http://st.3kn.jp/</div>
         </a>
         <a class="normal-block" href="https://st.nightcord.de5.net/" target="_blank">
-            <div class="link-name">pjsk表情包制作网址2</div>
+            <div class="link-name" data-i18n="link5">pjsk表情包制作网址2</div>
             <div class="link-url">https://st.nightcord.de5.net/</div>
         </a>
         <a class="normal-block" href="https://8823.resona.cn/costume-preview" target="_blank">
-            <div class="link-name">pjsk角色3d换装</div>
+            <div class="link-name" data-i18n="link6">pjsk角色3d换装</div>
             <div class="link-url">https://8823.resona.cn/costume-preview</div>
         </a>
         <a class="normal-block" href="https://sekai-stories.pages.dev" target="_blank">
-            <div class="link-name">pjsk剧情制作器</div>
+            <div class="link-name" data-i18n="link7">pjsk剧情制作器</div>
             <div class="link-url">https://sekai-stories.pages.dev</div>
         </a>
         <a class="normal-block" href="https://pjsk-zh.mid.red/" target="_blank">
-            <div class="link-name">pjsk冲榜车队</div>
+            <div class="link-name" data-i18n="link8">pjsk冲榜车队</div>
             <div class="link-url">https://pjsk-zh.mid.red/</div>
         </a>
         <a class="normal-block" href="https://snowyviewer.exmeaning.com/" target="_blank">
-            <div class="link-name">pjsk资料库</div>
+            <div class="link-name" data-i18n="link9">pjsk资料库</div>
             <div class="link-url">https://snowyviewer.exmeaning.com/</div>
         </a>
-        <div class="section-label">实用工具</div>
+
+        <div class="section-label" data-i18n="cat3">实用工具</div>
         <a class="normal-block" href="https://ebilibili.com/download" target="_blank">
-            <div class="link-name">bilibili视频下载器</div>
+            <div class="link-name" data-i18n="link10">bilibili视频下载器</div>
             <div class="link-url">ebilibili.com/download</div>
         </a>
         <a class="normal-block" href="https://pan.vocaloid.world" target="_blank">
-            <div class="link-name">瑟狐下载站（可下VOCALOID声库）</div>
+            <div class="link-name" data-i18n="link11">瑟狐下载站（可下VOCALOID声库）</div>
             <div class="link-url">pan.vocaloid.world</div>
         </a>
         <a class="normal-block" href="https://vocabirth.melodynade.com" target="_blank">
-            <div class="link-name">查生日当天的术曲</div>
+            <div class="link-name" data-i18n="link12">查生日当天的术曲</div>
             <div class="link-url">vocabirth.melodynade.com</div>
         </a>
         <a class="normal-block" href="https://liteui.dcde.club" target="_blank">
-            <div class="link-name">周榜素材下载器</div>
+            <div class="link-name" data-i18n="link13">周榜素材下载器</div>
             <div class="link-url">liteui.dcde.club</div>
         </a>
         <a class="normal-block" href="https://sdercolin.github.io/utaformatix3/" target="_blank">
-            <div class="link-name">工程转换器</div>
+            <div class="link-name" data-i18n="link14">工程转换器</div>
             <div class="link-url">https://sdercolin.github.io/utaformatix3/</div>
         </a>
         <a class="normal-block" href="https://voca.wiki" target="_blank">
-            <div class="link-name">vocaloid wiki</div>
+            <div class="link-name" data-i18n="link15">vocaloid wiki</div>
             <div class="link-url">voca.wiki</div>
         </a>
-        <div class="section-label">友情网站</div>
+
+        <div class="section-label" data-i18n="cat4">MC工具</div>
+        <a class="normal-block" href="https://mcskincreator.app/studio" target="_blank">
+            <div class="link-name" data-i18n="link16">mc渲染图</div>
+            <div class="link-url">https://mcskincreator.app/studio</div>
+        </a>
+        <a class="normal-block" href="https://mcskins.top/avatar-maker" target="_blank">
+            <div class="link-name" data-i18n="link17">mc动作分块</div>
+            <div class="link-url">https://mcskins.top/avatar‑maker</div>
+        </a>
+
+        <div class="section-label" data-i18n="cat5">友情网站</div>
         <a class="normal-block" href="https://buefatcat.github.io/koneko-dosu-website/" target="_blank">
-            <div class="link-name">肥猫ドス官网</div>
+            <div class="link-name" data-i18n="link18">肥猫ドス官网</div>
             <div class="link-url">https://buefatcat.github.io/koneko-dosu-website/</div>
         </a>
     </div>
 </main>
 </div>
-<div id="filePage" class="page">
-<main class="container">
-    <a class="back-home" id="goHome2" href="#">返回首页</a>
-    <div class="link-group">
-        <div class="section-label">可用文件</div>
-        <div class="file-row">
-            <div class="link-name">Miku svflat AI2声库</div>
-            <a class="download-btn" href="https://github.com/mote27-ctrl/dyedawn/releases/latest/download/flatmikuai2.sfpk" download="flatmikuai2.sfpk">下载</a>
-        </div>
-        <div class="file-row">
-            <div class="link-name">可不SV AI声库</div>
-            <a class="download-btn" href="https://github.com/mote27-ctrl/dyedawn/releases/latest/download/KAFU.AI-installer-v130.sfpk" download="KAFU.AI-installer-v130.sfpk">下载</a>
-        </div>
-    </div>
-</main>
-</div>
+
 <footer>
-    <p>© 2026 Dyedawn All rights reserved.</p>
+    <p data-i18n="copyright">© 2026 Dyedawn All rights reserved.</p>
 </footer>
+
 <div id="pageTop">top</div>
+
 <script>
+const i18nData = {
+    zh:{
+        setting:"设置",
+        darkmode:"明暗模式",
+        language:"语言选择",
+        shareBtn:"网站分享",
+        backHome:"返回首页",
+        cat1:"工程配布",
+        cat2:"世界计划",
+        cat3:"实用工具",
+        cat4:"MC工具",
+        cat5:"友情网站",
+        link1:"v站工程分享站",
+        link2:"外网工程分享站",
+        link3:"vocalfiles工程站",
+        link4:"pjsk表情包制作网址1",
+        link5:"pjsk表情包制作网址2",
+        link6:"pjsk角色3d换装",
+        link7:"pjsk剧情制作器",
+        link8:"pjsk冲榜车队",
+        link9:"pjsk资料库",
+        link10:"bilibili视频下载器",
+        link11:"瑟狐下载站（可下VOCALOID声库）",
+        link12:"查生日当天的术曲",
+        link13:"周榜素材下载器",
+        link14:"工程转换器",
+        link15:"vocaloid wiki",
+        link16:"mc渲染图",
+        link17:"mc动作分块",
+        link18:"肥猫ドス官网",
+        copyright:"© 2026 Dyedawn All rights reserved."
+    },
+    en:{
+        setting:"Settings",
+        darkmode:"Dark Mode",
+        language:"Language",
+        shareBtn:"Website Links",
+        backHome:"Back to Home",
+        cat1:"Project Distribution",
+        cat2:"Project Sekai",
+        cat3:"Useful Tools",
+        cat4:"MC Tools",
+        cat5:"Friend Sites",
+        link1:"V-Station Project Share",
+        link2:"Overseas Project Site",
+        link3:"vocalfiles Project Site",
+        link4:"PJSK Sticker Maker 1",
+        link5:"PJSK Sticker Maker 2",
+        link6:"PJSK 3D Costume Preview",
+        link7:"PJSK Story Maker",
+        link8:"PJSK Ranking Team",
+        link9:"PJSK Database",
+        link10:"Bilibili Video Downloader",
+        link11:"Sehu Download (VOCALOID Voicebanks)",
+        link12:"Find songs released on your birthday",
+        link13:"Weekly Ranking Asset Downloader",
+        link14:"Project Converter",
+        link15:"vocaloid wiki",
+        link16:"MC Render",
+        link17:"MC Avatar Posing",
+        link18:"Koneko Dosu Official Site",
+        copyright:"© 2026 Dyedawn All rights reserved."
+    },
+    ja:{
+        setting:"設定",
+        darkmode:"ダークモード",
+        language:"言語選択",
+        shareBtn:"サイトリンク",
+        backHome:"ホームへ戻る",
+        cat1:"プロジェクト配布",
+        cat2:"プロセカ",
+        cat3:"便利ツール",
+        cat4:"MCツール",
+        cat5:"フレンドサイト",
+        link1:"vサイトプロジェクト共有",
+        link2:"海外プロジェクトサイト",
+        link3:"vocalfilesプロジェクトサイト",
+        link4:"プロセカスタンプ作成サイト1",
+        link5:"プロセカスタンプ作成サイト2",
+        link6:"プロセカ3D衣装プレビュー",
+        link7:"プロセカストーリーメーカー",
+        link8:"プロセカランキングチーム",
+        link9:"プロセカデータベース",
+        link10:"bilibili動画ダウンローダー",
+        link11:"瑟狐ダウンロード(VOCALOID音源)",
+        link12:"誕生日に公開された曲検索",
+        link13:"週間ランキング素材ダウンローダー",
+        link14:"プロジェクトコンバーター",
+        link15:"vocaloid wiki",
+        link16:"MCレンダー",
+        link17:"MCアバターポーズ",
+        link18:"肥猫ドス公式サイト",
+        copyright:"© 2026 Dyedawn All rights reserved."
+    }
+};
+
+// i18n 切换函数
+function setLang(lang) {
+    localStorage.setItem("siteLang", lang);
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        el.innerText = i18nData[lang][key];
+    })
+}
+// 读取本地存储语言
+let currentLang = localStorage.getItem("siteLang") || "zh";
+
 const btnSetting = document.getElementById('btnSetting');
 const panelSetting = document.getElementById('panelSetting');
 const btnClosePanel = document.getElementById('btnClosePanel');
@@ -485,11 +598,17 @@ const switchTheme = document.getElementById('switchTheme');
 const pageTop = document.getElementById('pageTop');
 const homePage = document.getElementById('homePage');
 const sharePage = document.getElementById('sharePage');
-const filePage = document.getElementById('filePage');
 const goShare = document.getElementById('goShare');
-const goFile = document.getElementById('goFile');
 const goHome = document.getElementById('goHome');
-const goHome2 = document.getElementById('goHome2');
+const langSelect = document.getElementById('langSelect');
+
+langSelect.value = currentLang;
+setLang(currentLang);
+
+langSelect.onchange = function(){
+    setLang(this.value);
+}
+
 function openPanel(){
     panelSetting.classList.add('open');
     overlay.classList.add('show');
@@ -498,20 +617,18 @@ function closePanel(){
     panelSetting.classList.remove('open');
     overlay.classList.remove('show');
 }
+
 btnSetting.onclick = openPanel;
 btnClosePanel.onclick = closePanel;
 overlay.onclick = closePanel;
+
 switchTheme.onclick = ()=>{
     document.documentElement.classList.toggle('dark');
 }
+
 goShare.onclick = ()=>{
     homePage.classList.remove('active');
     sharePage.classList.add('active');
-    window.scrollTo({top:0,behavior:'smooth'});
-}
-goFile.onclick = ()=>{
-    homePage.classList.remove('active');
-    filePage.classList.add('active');
     window.scrollTo({top:0,behavior:'smooth'});
 }
 goHome.onclick = (e)=>{
@@ -520,12 +637,7 @@ goHome.onclick = (e)=>{
     homePage.classList.add('active');
     window.scrollTo({top:0,behavior:'smooth'});
 }
-goHome2.onclick = (e)=>{
-    e.preventDefault();
-    filePage.classList.remove('active');
-    homePage.classList.add('active');
-    window.scrollTo({top:0,behavior:'smooth'});
-}
+
 window.addEventListener('scroll',()=>{
     if(window.scrollY > 300){
         pageTop.classList.add('show');
